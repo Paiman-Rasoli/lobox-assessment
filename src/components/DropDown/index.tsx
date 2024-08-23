@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./style.scss";
 import { dropDownDataSet } from "../../data";
-import { FaChevronUp, FaChevronDown } from "react-icons/fa6";
+import { FaChevronUp, FaChevronDown, FaCheck } from "react-icons/fa6";
 
 function DropDown() {
   const [newItemValue, setNewItemValue] = useState("");
@@ -22,10 +22,10 @@ function DropDown() {
     (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === "Enter" && newItemValue) {
         if (!items.includes(newItemValue)) {
-          setItems([...items, newItemValue]);
+          setItems([newItemValue, ...items]);
         }
         setNewItemValue("");
-        setIsDropdownVisible(false);
+        // setIsDropdownVisible(false);
       }
     },
     [newItemValue]
@@ -80,16 +80,25 @@ function DropDown() {
 
       {isDropdownVisible && (
         <ul className="dropdown-menu">
-          {items
-            .filter((item) => item.includes(newItemValue))
-            .map((item, index) => (
-              <li
-                key={`option-${index}`}
-                onClick={() => handleSelectItem(item)}
-              >
-                {item}
-              </li>
-            ))}
+          {items.map((item, index) => (
+            <li
+              key={`option-${index}`}
+              onClick={() => handleSelectItem(item)}
+              className={item === newItemValue ? "selected" : ""}
+            >
+              <div className="content">
+                <div>{item}</div>
+
+                {item === newItemValue && (
+                  <div>
+                    <span className="checkmark">
+                      <FaCheck color="#007bff" />
+                    </span>
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
         </ul>
       )}
     </div>
