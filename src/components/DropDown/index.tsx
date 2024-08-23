@@ -24,8 +24,7 @@ function DropDown() {
         if (!items.includes(newItemValue)) {
           setItems([newItemValue, ...items]);
         }
-        setNewItemValue("");
-        // setIsDropdownVisible(false);
+        setNewItemValue(newItemValue);
       }
     },
     [newItemValue]
