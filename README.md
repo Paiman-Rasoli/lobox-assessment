@@ -1,8 +1,21 @@
-# React + Vite
+# Lobox technical assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lobox Assignment definition:
 
-Currently, two official plugins are available:
+Implement a multi drop-down select component with the ability to add new items by typing it in an input and pressing Enter. It should be closed by clicking outside of it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requirements:
+
+- Use ReactJS
+
+- Make the code reusable
+
+- Use TypeScript
+
+- Use SCSS, and try to implement it similarly to the image as much as possible.
+
+You can find the design in the attachment.
+
+https://drive.google.com/file/d/1zmB8q-v94pc4D-qCCUr4XnIR6COJ43Vz/view?usp=drive_link
+
+Note: Please do not use chatGBT or pre-made code in Gitlab otherwise it will be waste of time for you and for us.
